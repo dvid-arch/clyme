@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #f6fff9;
+}
+.gradd{
+ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.594), rgba(255, 255, 255, 0.15));;
+ backdrop-filter: blur(8px);
+}
