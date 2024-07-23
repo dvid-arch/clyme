@@ -16,15 +16,16 @@ function Navbar() {
   }
   return (
     <nav className='flex justify-between items-center gap-8 py-4 px-6 sticky top-0'>
-      <div className="logo w-16">
+      <div className="logo w-16 flex flex-col items-center">
         <img src={clymelogo} alt="" className='block' />
-        <div className='font-bold uppercase text-xl tracking-wider'>Clyme</div>
+        <div className='font-bold uppercase text-[21px]  tracking-wider'>Clyme</div>
       </div>
-      <div className=' justify-between stext-[21px] flex-1 max-w-[600px] hidden md:flex px-10'>
-        <NavLink to={'/contact'} className='uppercase font-medium'>Contact</NavLink>
-        <NavLink to={'/about'} className='uppercase font-medium'>Services</NavLink>
-        <NavLink to={'/about'} className='uppercase font-medium'>About</NavLink>
-        <NavLink to={'/donate'} className='uppercase font-medium'>Support</NavLink>
+      <div className=' justify-between text-[18px] flex-1 max-w-[80ch] text-slate-600  hidden md:flex px-10'>
+        <NavLink to={'/about'} className='font-semibold uppercase '>About</NavLink>
+        <NavLink to={'/projects'} className='font-semibold uppercase '>Projects</NavLink>
+        <NavLink to={'/donate'} className='font-semibold uppercase '>Support Clyme</NavLink>
+        <NavLink to={'/blog'} className='font-semibold uppercase '>Blog</NavLink>
+        <NavLink to={'/contact'} className='font-semibold uppercase '>Contact</NavLink>
       </div>
       <div className='hidden sm:block'>
         <button className='bg-cyan-300 py-1 px-3 text-[21px] sm:hidden md:block'>Act Now</button>
@@ -37,11 +38,11 @@ function Navbar() {
       {mnavopen &&
 
         <div className='p-8 absolute top-[100%] left-0 w-full bg-cyan-700 text-white'>
-          <ul>
-            <li className='text-[21px]'>About</li>
-            <li className='text-[21px]'>Contact</li>
-            <li className='text-[21px]'>Projects</li>
-            <li className='text-[21px]'>Support</li>
+          <ul className='text-[21px] flex flex-col'>
+            <NavLink to={'/about'} className='capitalize '>Projects</NavLink>
+            <NavLink to={'/donate'} className='capitalize '>Support Clyme</NavLink>
+            <NavLink to={'/blog'} className='capitalize '>Blog</NavLink>
+            <NavLink to={'/contact'} className='capitalize '>Contact</NavLink>
 
           </ul>
         </div>

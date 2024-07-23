@@ -13,22 +13,42 @@ function LandingPage() {
           <p className='text-16px md:text-[18px] my-4 text-center sm:text-left text-slate-600'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit deleniti numquam eligendi, ea exercitationem quibusdam </p>
           <button className='px-4 py-1 text-[21px] bg-cyan-300 mx-auto block sm:mx-0'>Act Now</button>
         </div>
-        <div className='  sm:h-auto hero-img sm:flex-1 flex align-bottom justify-center bg-center bg-contain bg-no-repeat' style={{backgroundImage: `url(${bgImg})`}}><img src={heroImg} alt="" className=' w-1/2  sm:w-10/12 md:w-2/3 xl:w-1/2  h-auto block' /></div>
+        <div className='  sm:h-auto hero-img sm:flex-1 flex align-bottom justify-center bg-center bg-contain bg-no-repeat' style={{ backgroundImage: `url(${bgImg})` }}><img src={heroImg} alt="" className=' w-1/2  sm:w-10/12 md:w-2/3 xl:w-1/2  h-auto block' /></div>
       </div>
+      <section className='bg-teal-950 p-8'>
+          <div className='flex justify-around gap-8 flex-wrap'>
+            <p className='flex flex-col items-center'>
+              <span className='block font-bold text-white text-[48px]'>100+</span>
+              <span className='block font-bold text-white text-[21px] capitalize tracking-wider'>Volunteers</span>
+            </p>
+            <p className='flex flex-col items-center'>
+              <span className='block font-bold text-white text-[48px]'>10+</span>
+              <span className='block font-bold text-white text-[21px] capitalize tracking-wider'>Universities</span>
+            </p>
+            <p className='flex flex-col items-center'>
+              <span className='block font-bold text-white text-[48px]'>3</span>
+              <span className='block font-bold text-white text-[21px] capitalize tracking-wider'>Awards</span>
+            </p>
+            <p className='flex flex-col items-center '>
+              <span className='block font-bold text-white text-[48px]'>100+</span>
+              <span className='block font-bold text-white text-[21px] capitalize tracking-wider'>Volunteers</span>
+            </p>
+          </div>
+      </section>
       <section>
         <div className="py-20 px-8 bg-teal-500">
           <div className="flex flex-col md:flex-row gap-8 text-center sm:text-left mb-4">
 
-            <div className="flex-1 mx-auto">
+            <div className="flex-1 mx-auto sm:mx-0">
               <h2 className="text-4xl mb-4 font-bold"><span className='font-normal'>Our</span> Mission</h2>
               <p className="max-w-[400px] my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quam praesentium odit libero doloremque quaerat, fugit explicabo debitis expedita similique quo voluptatum nam aperiam eius vitae aliquid beatae fugiat alias?</p>
             </div>
-            <div className="flex-1 mx-auto">
+            <div className="flex-1 mx-auto sm:mx-0">
               <h2 className="text-4xl mb-4 font-bold"><span className='font-normal'>Our</span> Vision</h2>
               <p className="max-w-[400px] my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quam praesentium odit libero doloremque quaerat, fugit explicabo debitis expedita similique quo voluptatum nam aperiam eius vitae aliquid beatae fugiat alias?</p>
             </div>
           </div>
-          <button className='bg-white py-2 px-8 text-cyan-500 text-[21px] inline-block rounded-md'>Learn More</button>
+          <button className='bg-white py-2 px-8 text-cyan-500 text-[21px] block rounded-md mx-auto sm:mx-0'>Learn More</button>
         </div>
       </section>
       <section className=''>
@@ -36,16 +56,16 @@ function LandingPage() {
           <h2 className='text-3xl sm:text-5xl font-bold px-8 mb-6'>Our Unique Approach</h2>
           <h3 className="text-4xl font-semibold mb-10 px-8">ART SOLUTION</h3>
           <div className="flex flex-col lg:flex-row mb-6">
-            <div className="flex flex-col sm:flex-row items-center bg-lime-200">
-              <span className=" text-2xl sm:text-[160px]  md:pl-8 pr-2 px-4">A</span>
+            <div className="flex flex-row items-center bg-lime-200 py-4">
+              <span className=" text-8xl sm:text-[160px]  md:pl-8 pr-2 px-4">A</span>
               <p className="flex-1 max-w-[400px] px-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quo minima, non aliquid minus officia optio, molestiae autem pariatur est itaque. </p>
             </div>
-            <div className="flex flex-col sm:flex-row items-center bg-orange-500">
-              <span className="text-[160px] px-4 ">R</span>
+            <div className="flex flex-row items-center bg-orange-500 py-4">
+              <span className=" text-8xl sm:text-[160px]  md:pl-8 pr-2 px-4">R</span>
               <p className="flex-1 max-w-[400px] px-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quo minima, non aliquid minus officia optio, molestiae autem pariatur est itaque. </p>
             </div>
-            <div className="flex flex-col sm:flex-row items-center bg-blue-600">
-              <span className="text-[160px] px-4 ">T</span>
+            <div className="flex flex-row items-center bg-blue-600 py-4">
+              <span className=" text-8xl sm:text-[160px]  md:pl-8 pr-2 px-4">T</span>
               <p className="flex-1 max-w-[400px] px-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quo minima, non aliquid minus officia optio, molestiae autem pariatur est itaque.</p>
             </div>
 
@@ -63,7 +83,6 @@ function LandingPage() {
               <h4 className='font-semibold text-3xl mb-4'>Education</h4>
               <p className='leading-loose'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas eveniet, soluta illo distinctio veritatis ipsa vero dolore quisquam minima reiciendis, accusamus </p>
             </div>
-           
           </div>
         </div>
       </section>
@@ -84,6 +103,28 @@ function LandingPage() {
             </div>
           </div>
           <button className='font-semibold px-8 py-2 mt-6 bg-cyan-300  md:hidden'>See Projects</button>
+        </div>
+      </section>
+      <section className='pt-20 pb-10'>
+        <div className='px-8'>
+          <h2 className='text-4xl font-bold mb-8'>Become a Climate Champion</h2>
+          <div className='flex justify-around gap-8  mx-auto'>
+            <div className='p-4 border shadow-md flex flex-col gap-4 max-w-[360px]'>
+              <div className='min-h-[160px] bg-slate-500'></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis, quis eum neque odit repudiandae?</p>
+              <button className='block text-[21px] w-full bg-cyan-400 '>Donate</button>
+            </div>
+            <div className='p-4 border shadow-md flex flex-col gap-4 max-w-[360px]'>
+              <div className='min-h-[160px] bg-slate-500'></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis, quis eum neque odit repudiandae?</p>
+              <button className='block text-[21px] w-full bg-cyan-400 '>Donate</button>
+            </div>
+            <div className='p-4 border shadow-md flex flex-col gap-4 max-w-[360px]'>
+              <div className='min-h-[160px] bg-slate-500'></div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis, quis eum neque odit repudiandae?</p>
+              <button className='block text-[21px] w-full bg-cyan-400 '>Donate</button>
+            </div>
+          </div>
         </div>
       </section>
       <section>
@@ -158,8 +199,8 @@ function LandingPage() {
           </div>
         </div>
       </section>
-      
-      
+
+
     </div>
   )
 }

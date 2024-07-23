@@ -11,6 +11,9 @@ import Donate from './pages/Donate/Donate';
 import Projects from './pages/Projects/Projects';
 import Footer from './components/Footer';
 import ProjectPage from './pages/Projects/Project';
+import Volunteer from './pages/Volunteer/Volunteer';
+import Partner from './pages/Partner/Partner';
+import Membership from './pages/Membership/Membership';
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
             <Route path="/Project" element={<ProjectPage />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Donate" element={<Donate />} />
+            <Route path="/Volunteer" element={<Volunteer />} />
+            <Route path="/Partner" element={<Partner />} />
+            <Route path="/Membership" element={<Membership />} />
             <Route path="/" element={<LandingPage />} />
           </Routes>
         </main>
