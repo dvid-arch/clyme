@@ -8,9 +8,9 @@ function Footer() {
                         <p>Stay updated about climate issues!</p>
                         <p className='text-white'>Subscribe to our NewsLetter</p>
                     </div>
-                    <div className='flex-1 relative w-full'>
+                    <div className='flex-1 relative w-full flex flex-col gap-1'>
                         <input type="text" className='block w-full text-[21px] py-1 px-4 rounded-md' />
-                        <button className='absolute right-0 bottom-0 block py-1 px-4 bg-cyan-400 text-[21px] rounded-r-md'>Subscribe</button>
+                        <button className='sm:absolute right-0 bottom-0 block py-1 px-4 bg-cyan-400 text-[21px] rounded-md sm:round-none sm:rounded-r-md'>Subscribe</button>
                     </div>
                 </div>
             </div>
@@ -22,7 +22,7 @@ function Footer() {
                         <p>Copyright @2013-2021. all rights reserved</p>
                     </div>
                 </div>
-                <div className=' flex flex-col sm:flex-row gap-2 justify-center text-cyan-400'>
+                <div className=' flex flex-wrap  gap-2 justify-center text-cyan-400'>
                     <span>Sponsorship</span>
                     <span>Partnership</span>
                     <span>Contact</span>

@@ -3,7 +3,7 @@ import proj from '../../assets/proj.jpg'
 function BlogPost() {
     return (
         <div className='flex justify-between'>
-            <div className='px-8 flex-1'>
+            <div className='px-8 flex-1 pb-20'>
                 <div className=' mt-20 p-4 rounded-lg bg-orange-400 mb-6'>
                     <div className="flex flex-col lg:flex-row items-center gap-8">
                         <div className="">

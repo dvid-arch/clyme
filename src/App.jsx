@@ -14,6 +14,7 @@ import ProjectPage from './pages/Projects/Project';
 import Volunteer from './pages/Volunteer/Volunteer';
 import Partner from './pages/Partner/Partner';
 import Membership from './pages/Membership/Membership';
+import MeetOurTeam from './pages/Team/Team';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/Volunteer" element={<Volunteer />} />
             <Route path="/Partner" element={<Partner />} />
             <Route path="/Membership" element={<Membership />} />
+            <Route path="/Team" element={<MeetOurTeam />} />
             <Route path="/" element={<LandingPage />} />
           </Routes>
         </main>

@@ -108,7 +108,7 @@ function LandingPage() {
       <section className='pt-20 pb-10'>
         <div className='px-8'>
           <h2 className='text-4xl font-bold mb-8'>Become a Climate Champion</h2>
-          <div className='flex justify-around gap-8  mx-auto'>
+          <div className='grid sm:grid-cols-2  md:grid-cols-3 justify-around gap-8  mx-auto'>
             <div className='p-4 border shadow-md flex flex-col gap-4 max-w-[360px]'>
               <div className='min-h-[160px] bg-slate-500'></div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis, quis eum neque odit repudiandae?</p>
@@ -117,12 +117,12 @@ function LandingPage() {
             <div className='p-4 border shadow-md flex flex-col gap-4 max-w-[360px]'>
               <div className='min-h-[160px] bg-slate-500'></div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis, quis eum neque odit repudiandae?</p>
-              <button className='block text-[21px] w-full bg-cyan-400 '>Donate</button>
+              <button className='block text-[21px] w-full bg-cyan-400 '>Partner</button>
             </div>
             <div className='p-4 border shadow-md flex flex-col gap-4 max-w-[360px]'>
               <div className='min-h-[160px] bg-slate-500'></div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis, quis eum neque odit repudiandae?</p>
-              <button className='block text-[21px] w-full bg-cyan-400 '>Donate</button>
+              <button className='block text-[21px] w-full bg-cyan-400 '>Volunteer</button>
             </div>
           </div>
         </div>

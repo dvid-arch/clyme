@@ -15,7 +15,7 @@ function Navbar() {
     }
   }
   return (
-    <nav className='flex justify-between items-center gap-8 py-4 px-6 sticky top-0'>
+    <nav className='flex justify-between items-center gap-8 py-2 px-6 sticky top-0'>
       <div className="logo w-16 flex flex-col items-center">
         <img src={clymelogo} alt="" className='block' />
         <div className='font-bold uppercase text-[21px]  tracking-wider'>Clyme</div>
