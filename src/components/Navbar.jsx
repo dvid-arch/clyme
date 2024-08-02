@@ -3,9 +3,13 @@ import clymelogo from '../assets/clymelogo.png'
 import { NavLink } from 'react-router-dom';
 
 
+
 function Navbar() {
   const [mnavopen, setMnavopen] = useState(false);
 
+  window.addEventListener('scroll', ()=>{
+    setMnavopen(false)
+  })
   function handleClick() {
     if (mnavopen) {
       setMnavopen(false);
@@ -37,12 +41,14 @@ function Navbar() {
       </div>
       {mnavopen &&
 
-        <div className='p-8 absolute top-[100%] left-0 w-full bg-cyan-700 text-white'>
-          <ul className='text-[21px] flex flex-col'>
-            <NavLink to={'/about'} className='capitalize '>Projects</NavLink>
-            <NavLink to={'/donate'} className='capitalize '>Support Clyme</NavLink>
-            <NavLink to={'/blog'} className='capitalize '>Blog</NavLink>
-            <NavLink to={'/contact'} className='capitalize '>Contact</NavLink>
+        <div className='px-4 py-4 bg-cyan-600 absolute  top-[100%] left-0 w-full  text-white '>
+          <div className='absolute h-screen w-screen -z-20 left-0 bg-black opacity-15 top-0' onClick={()=>setMnavopen(false)}></div>
+          <ul className='text-[18px] flex flex-col gap-2'>
+            <NavLink to={'/about'} className='font-semibold capitalize underline underline-offset-4'>About</NavLink>
+            <NavLink to={'/projects'} className='font-semibold capitalize  underline underline-offset-8'>Projects</NavLink>
+            <NavLink to={'/donate'} className='font-semibold capitalize  underline underline-offset-8'>Support Clyme</NavLink>
+            <NavLink to={'/blog'} className='font-semibold capitalize  underline underline-offset-8'>Blog</NavLink>
+            <NavLink to={'/contact'} className='font-semibold capitalize  underline underline-offset-8'>Contact</NavLink>
 
           </ul>
         </div>

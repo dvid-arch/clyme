@@ -78,11 +78,11 @@ const team = [
 
 // Team Member component
 const TeamMember = ({ member, onClick }) => (
-    <div className='flex items-start gap-4 p-4'>
+    <div className='flex items-start gap-4 p-4' onClick={() => onClick(member)}>
         <div className='h-12 w-12 rounded-full border shadow-md '>
 
         </div>
-        <div className=" cursor-pointer" onClick={() => onClick(member)}>
+        <div className=" cursor-pointer" >
             <h3 className="text-lg font-semibold">{member.name}</h3>
             <p>{member.title}</p>
             <p>{member.country}</p>
@@ -115,13 +115,14 @@ const Mteam = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto  py-8 px-8">
             <h1 className="text-4xl font-semibold  mb-8">Meet Our Team</h1>
-            <div className="grid grid-cols-1 xsm:grid-cols-2 md:grid-cols-3 mx-auto gap-4">
+            <div className="grid grid-cols-1 xsm:grid-cols-2 md:grid-cols-3 mx-auto gap-4 mb-6">
                 {team.map((member, index) => (
                     <TeamMember key={index} member={member} onClick={handleClick} />
                 ))}
             </div>
+            <div><button className='inline-block py-2 px-8 bg-cyan-400'>more</button></div>
             {selectedMember && <Modal member={selectedMember} onClose={handleClose} />}
         </div>
     );

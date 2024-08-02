@@ -9,3 +9,11 @@ body{
  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.594), rgba(255, 255, 255, 0.15));;
  backdrop-filter: blur(8px);
 }
+
+.vid-box {
+    
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  
+  
