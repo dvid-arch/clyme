@@ -121,6 +121,14 @@ function About() {
 
                 </div>
             </section>
+            <section>
+                <div className='px-8'>
+                    <h2 className='text-4xl font-semibold mb-8'>Awards and Commendations</h2>
+                    <div className=''>
+
+                    </div>
+                </div>
+            </section>
             <Mteam />
         </div>
     )
