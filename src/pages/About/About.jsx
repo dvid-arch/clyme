@@ -6,28 +6,28 @@ function About() {
     const aboutVM = [
         {
             title: 'vision',
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quam praesentium odit libero doloremque quaerat, fugit explicabo debitis expedita similique quo voluptatum nam aperiam eius vitae aliquid beatae fugiat alias?'
+            text: 'Our vision is a world where every individual takes responsibility for their environmental impact, leading to a more sustainable and resilient future for generations to come.'
         },
         {
             title: 'Mision',
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quam praesentium odit libero doloremque quaerat, fugit explicabo debitis expedita similique quo voluptatum nam aperiam eius vitae aliquid beatae fugiat alias?'
+            text: 'At Clyme, our mission is to empower individuals to make eco-friendly choices and combat climate change by providing innovative technology solutions that incentivize sustainable behaviors and reduce carbon footprints.'
         }
     ]
 
     const aboutART = [
         {
             title: 'A',
-            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quo minima, non aliquid minus officia optio, molestiae autem pariatur est itaque.',
+            text: 'Clyme partners with communities, NGOs, and policymakers to drive sustainability through grassroots campaigns like climate awareness, recycling, and tree planting.',
             bg: ''
         },
         {
             title: 'R',
-            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quo minima, non aliquid minus officia optio, molestiae autem pariatur est itaque.',
+            text: 'CClyme drives renewable energy adoption by partnering with providers and offering innovative financing, making clean energy accessible across Africa to reduce carbon emissions.',
             bg: ''
         },
         {
             title: 'T',
-            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quo minima, non aliquid minus officia optio, molestiae autem pariatur est itaque.',
+            text: 'Clymes technology solution includes a mobile app that helps users track carbon footprints, set goals, and get personalized tips to reduce emissions. Our platform also supports carbon offsetting projects to promote global sustainability.',
             bg: ''
         },
 
@@ -36,23 +36,23 @@ function About() {
     const aboutEarth = [
         {
             title: 'Education',
-            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quo minima, non aliquid minus officia optio, molestiae autem pariatur est itaque.',
+            text: 'Utilize our website and app to disseminate information on climate change, fostering awareness and understanding..',
         },
         {
             title: 'Advocacy',
-            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quo minima, non aliquid minus officia optio, molestiae autem pariatur est itaque.',
+            text: 'Seminars and training for youth engagement in climate change action.',
         },
         {
             title: 'Recylcing',
-            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quo minima, non aliquid minus officia optio, molestiae autem pariatur est itaque.',
+            text: 'Invest in renewable energy projects to offset carbon emissions and promote sustainable practices.',
         },
         {
             title: 'Technology',
-            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quo minima, non aliquid minus officia optio, molestiae autem pariatur est itaque.',
+            text: 'Innovative website and app for climate information in over 20 languages.',
         },
         {
             title: 'Harmony',
-            text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quo minima, non aliquid minus officia optio, molestiae autem pariatur est itaque.',
+            text: 'Collaborate with governments, private entities, and fintech companies to amplify our impact.',
         }
     ]
 
@@ -72,7 +72,7 @@ function About() {
             </div>
 
             <section>
-                <div className="py-20 px-8 bg-teal-500">
+                <div className="py-20 px-8 bg-teal-400">
                     <div className="flex flex-col md:flex-row gap-8 text-center sm:text-left mb-4">
                         {aboutVM.map((item, index) => (
 
@@ -82,7 +82,7 @@ function About() {
                             </div>
                         ))}
                     </div>
-                    <Link to={'/about'} className='bg-white py-2 px-8 text-cyan-500 text-[21px] block w-fit rounded-md mx-auto sm:mx-0'>Learn More</Link>
+
                 </div>
             </section>
             <section className=''>
@@ -92,7 +92,7 @@ function About() {
                     <div className="flex flex-col lg:flex-row mb-6">
                         {aboutART.map((item, index) => (
 
-                            <div className="flex flex-row items-center py-4">
+                            <div key={index} className="flex flex-row items-center py-4">
                                 <span className=" text-8xl sm:text-[160px]  md:pl-8 pr-2 px-4">{item.title}</span>
                                 <p className="flex-1 max-w-[400px] px-4">{item.text}</p>
                             </div>
@@ -100,10 +100,7 @@ function About() {
 
 
                     </div>
-                    <div className='px-8'>
 
-                        <Link to={'/about'} className='bg-cyan-500 hite py-2 px-8 text-white text-[21px] block w-fit rounded-md mx-auto sm:mx-0'>Learn More</Link>
-                    </div>
                 </div>
                 <div className="pt-20 pb-10 px-4 sm:px-8">
 
@@ -111,25 +108,42 @@ function About() {
                     <div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-8 py-10">
                         {aboutEarth.map((item, index) => (
 
-                            <div className='p-4 border border-gray-300 rounded-md'>
-                                <h4 className='font-semibold text-3xl mb-4'>{item.title}</h4>
+                            <div key={index} className='p-4 border border-gray-300 rounded-md bg-gradient-to-r from-brgreen to-brblue'  >
+                                <h4 className='font-semibold text-3xl mb-4 backdrop-filter backdrop-opacity-40 backdrop-blur-40'>{item.title}</h4>
                                 <p className='leading-loose'>{item.text}</p>
                             </div>
                         ))}
                     </div>
-                    <Link to={'/about'} className='bg-cyan-500 hite py-2 px-8 text-white text-[21px] block w-fit rounded-md mx-auto sm:mx-0'>Learn More</Link>
+
 
                 </div>
             </section>
-            <section>
-                <div className='px-8'>
-                    <h2 className='text-4xl font-semibold mb-8'>Awards and Commendations</h2>
-                    <div className=''>
+            <section className='bg-teal-950'>
+                <div className='px-8 pt-10 py-10'>
+                    <h2 className='mb-8 text-4xl font-bold text-white'>The Clyme Advantage: Unmatched Progress
+                    </h2>
+                    <ul className='grid md:grid-cols-2 gap-8 text-[18px]'>
+                        <li className='max-w-[600px] min-w-[300px] text-gray-300'><span className='font-semibold text-xl text-white'>App Development: </span>
+                            The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
+                        </li>
+                        <li className='max-w-[600px] min-w-[300px] text-gray-300'><span className='font-semibold text-xl text-white'>App Development: </span>
+                            The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
+                        </li>
+                        <li className='max-w-[600px] min-w-[300px] text-gray-300'><span className='font-semibold text-xl text-white'>App Development: </span>
+                            The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
+                        </li>
+                        <li className='max-w-[600px] min-w-[300px] text-gray-300'><span className='font-semibold text-xl text-white'>App Development: </span>
+                            The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
+                        </li>
+                        <li className='max-w-[600px] min-w-[300px] text-gray-300'><span className='font-semibold text-xl text-white'>App Development: </span>
+                            The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
+                        </li>
+                    </ul>
 
-                    </div>
+
                 </div>
             </section>
-            <Mteam />
+            {/* <Mteam /> */}
         </div>
     )
 }

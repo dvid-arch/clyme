@@ -14,7 +14,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='bg-teal-900 text-white p-8 text-center'>
+            <div className='bg-teal-950 text-brwhite p-8 text-center'>
                 <div className='flex flex-col sm:flex-row gap-8 justify-center mb-4 '>
 
                     <div>clyme</div>
