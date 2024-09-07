@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import clymelogo from '../assets/clymelogo.png'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Donate from '../pages/Donate/Donate';
 
 
@@ -50,7 +50,7 @@ function Navbar({ shadow }) {
         <NavLink to={'/contact'} className='font-semibold uppercase '>Contact</NavLink>
       </div>
       <div className='hidden sm:block'>
-        <button className='bg-brblue text-white  py-1 px-3 text-[21px] sm:hidden md:block'>Donate</button>
+        <Link to={'/donate'} className='bg-red-500 text-white  py-1 px-3 text-[21px] sm:hidden md:block'>Donate</Link>
       </div>
       <div className='flex flex-col gap-1 border p-[2px] shadow md:hidden' onClick={handleClick}>
         <span className='w-8 h-1 bg-black block rounded-full'></span>

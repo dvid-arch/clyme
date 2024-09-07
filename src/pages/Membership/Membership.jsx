@@ -3,19 +3,19 @@ import FormComponent from '../../components/Form';
 
 const Membership = () => {
     return (
-        <div className="  py-20 flex gap-8 px-8 bg-gray-200">
+        <div className="  py-20 flex gap-8 px-8 ">
             <div className="max-w-4xl mx-auto flex-1  p-8 ">
-                <div className='bg-white p-4  rounded-md '>
+                <div className='bg-white p-4  rounded-md shadow-md'>
 
-                    <h1 className="text-3xl font-bold text-purple-600 mb-4">Become a Member</h1>
+                    <h1 className="text-3xl font-bold text-black mb-4">Become a Member</h1>
                     <p className="text-lg text-gray-700 mb-6">
                         Join our community of dedicated individuals committed to making a difference in the fight against climate change. As a member, you'll receive exclusive benefits and opportunities to get involved.
                     </p>
                 </div>
 
-                <div className='bg-white p-4  rounded-md mt-10'>
+                <div className='bg-white shadow-md p-4  rounded-md mt-10'>
 
-                    <h2 className="text-2xl font-semibold text-purple-500 mb-4">Membership Benefits</h2>
+                    <h2 className="text-2xl font-semibold text-black mb-4">Membership Benefits</h2>
                     <ul className="list-disc list-inside text-gray-700 mb-6">
                         <li className="mb-2">Regular updates and newsletters</li>
                         <li className="mb-2">Access to member-only events and webinars</li>
@@ -28,7 +28,7 @@ const Membership = () => {
 
             </div>
             <div className='max-w-[80ch] mx-auto flex-1  p-6 rounded-lg backdrop-blur-lg backdrop-opacity-5 bg-white shadow-lg px-8'>
-                <h2 className="text-2xl font-semibold text-purple-500 mb-4">Join Us</h2>
+                <h2 className="text-2xl font-semibold text-black mb-4">Join Us</h2>
                 <p className="text-lg text-gray-700 mb-6">
                     Ready to become a member? Fill out the form below to start your journey with us.
                 </p>

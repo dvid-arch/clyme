@@ -32,22 +32,13 @@ function Projects() {
                     </p>
                 </div>
             </section>
-            <div className="flex flex-wrap justify-center  gap-4 sm:gap-6 py-2 px-4 sm:px-8 bg-slate-200">
-                <a href="#" className="inline-block py-1 px-2 sm:px-6 border rounded-full border-cyan-400 bg-cyan-300">All</a>
-                <a href="#" className="inline-block py-1 px-2 sm:px-6 border rounded-full border-cyan-400">Nigeria</a>
-                <a href="#" className="inline-block py-1 px-2 sm:px-6 border rounded-full border-cyan-400">Rwanda</a>
-                <a href="#" className="inline-block py-1 px-2 sm:px-6 border rounded-full border-cyan-400">Ghana</a>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 justify-between gap-8 px-8 pt-10 py-20">
-                <div className="  p-4 ">
-                    <img src={proj} alt="" className="w-full mb-2" />
-                    <div className='flex gap-2'>
-                        <span className='border inline-block bg-gray-400 h-8 w-8'></span>
-                        <div className='flex-1'>
 
-                            <p className='text-[18px] underline underline-offset-4 mb-1 font-semibold'>Rwanda Climate Sensitization program</p>
-                            <p className='text-sm opacity-70'>24th july 2024</p>
-                        </div>
+            <div className='py-20 px-8'>
+                <h2 className='text-4xl mb-6 font-bold'>A Thousand Words in Images</h2>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 justify-between gap-8 mt-10 ">
+                    <div className=" ">
+                        <img src={proj} alt="" className="w-full mb-2" />
+
                     </div>
                 </div>
             </div>

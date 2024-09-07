@@ -1,12 +1,12 @@
 function Contact() {
     return (
         <div className="px-8 pt-10">
-            <section className=" flex">
+            <section className=" flex flex-col md:flex-row gap-8">
                 <div className="flex-1 pr-8">
-                    <h2 className="text-6xl font-semibold mb-4">Contact Us</h2>
+                    <h2 className="md:text-6xl text-4xl font-semibold mb-4  ">Contact Us</h2>
                     <p className="text-lg max-w-[500px]">We'd love to hear from you! Please fill out the form below to get in touch with us.</p>
             
-                    <div className="w-full  mt-10 bg-orange-100 px-8 py-4 rounded-md">
+                    <div className="w-full  mt-10 bg-orange-100 p-2 md:px-8 md:py-4 rounded-md flex flex-col gap-2 text-left">
                         <p className="text-lg"><strong>Address:</strong> 123 Climate Tech Avenue, Eco City, AC 12345</p>
                         <p className="text-lg"><strong>Phone:</strong> +123 456 7890</p>
                         <p className="text-lg"><strong>Email:</strong> info@clyme.com</p>

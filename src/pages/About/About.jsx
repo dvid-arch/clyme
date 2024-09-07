@@ -73,22 +73,23 @@ function About() {
 
             <section>
                 <div className="py-20 px-8 bg-teal-400">
-                    <div className="flex flex-col md:flex-row gap-8 text-center sm:text-left mb-4">
+                    <div className="flex text-[18px] justify-center items-center flex-col md:flex-row gap-8 text-center sm:text-left mb-4">
                         {aboutVM.map((item, index) => (
 
-                            <div key={index} className="flex-1 mx-auto sm:mx-0">
-                                <h2 className="text-4xl mb-4 font-bold"><span className='font-normal capitalize'>Our</span> {item.title}</h2>
-                                <p className="max-w-[400px] my-4">{item.text}</p>
+                            <div key={index} className="flex-1  sm:mx-0">
+                                <h2 className="text-4xl mb-4 font-bold text-center"><span className='font-normal capitalize'>Our</span> {item.title}</h2>
+                                <p className="max-w-[400px] mx-auto text-center my-4">{item.text}</p>
                             </div>
                         ))}
                     </div>
+
 
                 </div>
             </section>
             <section className=''>
                 <div className="pt-20 pb-10 ">
-                    <h2 className='text-3xl sm:text-5xl font-bold px-8 mb-6 text-center sm:text-left'>Our Unique Approach</h2>
-                    <h3 className="text-4xl font-semibold mb-10 px-8 text-center sm:text-left">ART SOLUTION</h3>
+                    <h2 className='text-3xl sm:text-5xl font-bold px-8 mb-6  '>Our Unique Approach</h2>
+                    <h3 className="text-4xl font-semibold mb-10 px-8 ">ART SOLUTION</h3>
                     <div className="flex flex-col lg:flex-row mb-6">
                         {aboutART.map((item, index) => (
 
@@ -101,14 +102,18 @@ function About() {
 
                     </div>
 
+
+                    
+
+
                 </div>
                 <div className="pt-20 pb-10 px-4 sm:px-8">
 
-                    <h3 className="text-4xl text-center sm:text-left font-semibold mb-10 ">The <span className='text-4xl text-blue-500'>EARTH</span> Agenda</h3>
-                    <div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-8 py-10">
+                    <h3 className="text-4xl  font-semibold mb-10 ">The <span className='text-4xl text-blue-500'>EARTH</span> Agenda</h3>
+                    <div className="grid justify-center  sm:grid-cols-2 md:grid-cols-3 gap-8 py-10">
                         {aboutEarth.map((item, index) => (
 
-                            <div key={index} className='p-4 border border-gray-300 rounded-md bg-gradient-to-r from-brgreen to-brblue'  >
+                            <div key={index} className='p-4 border border-gray-300 rounded-md bg-gradient-to-r from-brgreen/30 to-brblue/10'  >
                                 <h4 className='font-semibold text-3xl mb-4 backdrop-filter backdrop-opacity-40 backdrop-blur-40'>{item.title}</h4>
                                 <p className='leading-loose'>{item.text}</p>
                             </div>
@@ -118,32 +123,39 @@ function About() {
 
                 </div>
             </section>
-            <section className='bg-teal-950'>
+            <section className='bg-teal-950/90'>
                 <div className='px-8 pt-10 py-10'>
                     <h2 className='mb-8 text-4xl font-bold text-white'>The Clyme Advantage: Unmatched Progress
                     </h2>
-                    <ul className='grid md:grid-cols-2 gap-8 text-[18px]'>
-                        <li className='max-w-[600px] min-w-[300px] text-gray-300'><span className='font-semibold text-xl text-white'>App Development: </span>
+                    <ul className='grid sm:grid-cols-2 lg:grid-cols-3 gap-8'>
+                        
+                        
+                        <li className='md:max-w-[400px] min-w-[300px] text-gray-300 bg-black/20 p-4'><span className='font-semibold text-xl text-white '>App Development: </span>
                             The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
                         </li>
-                        <li className='max-w-[600px] min-w-[300px] text-gray-300'><span className='font-semibold text-xl text-white'>App Development: </span>
+                        <li className='md:max-w-[400px] min-w-[300px] text-gray-300 bg-black/20 p-4'><span className='font-semibold text-xl text-white '>App Development: </span>
                             The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
                         </li>
-                        <li className='max-w-[600px] min-w-[300px] text-gray-300'><span className='font-semibold text-xl text-white'>App Development: </span>
+                        <li className='md:max-w-[400px] min-w-[300px] text-gray-300 bg-black/20 p-4'><span className='font-semibold text-xl text-white '>App Development: </span>
                             The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
                         </li>
-                        <li className='max-w-[600px] min-w-[300px] text-gray-300'><span className='font-semibold text-xl text-white'>App Development: </span>
+                        <li className='md:max-w-[400px] min-w-[300px] text-gray-300 bg-black/20 p-4'><span className='font-semibold text-xl text-white '>App Development: </span>
                             The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
                         </li>
-                        <li className='max-w-[600px] min-w-[300px] text-gray-300'><span className='font-semibold text-xl text-white'>App Development: </span>
+                        <li className='md:max-w-[400px] min-w-[300px] text-gray-300 bg-black/20 p-4'><span className='font-semibold text-xl text-white '>App Development: </span>
                             The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
                         </li>
+                        <li className='md:max-w-[400px] min-w-[300px] text-gray-300 bg-black/20 p-4'><span className='font-semibold text-xl text-white '>App Development: </span>
+                            The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
+                        </li>
+                        
+                        
                     </ul>
 
 
                 </div>
             </section>
-            {/* <Mteam /> */}
+            <Mteam />
         </div>
     )
 }

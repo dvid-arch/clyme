@@ -143,7 +143,7 @@ function LandingPage() {
       </div>
       <AnimatedNumber achievements={achievements} />
       <section>
-        <div className="py-20 px-8 ">
+        <div className="py-20 px-8 bg-braccent">
           <div className="flex text-[18px] justify-center items-center flex-col md:flex-row gap-8 text-center sm:text-left mb-4">
             {aboutVM.map((item, index) => (
 
@@ -159,8 +159,8 @@ function LandingPage() {
       </section>
       <section className=''>
         <div className="pt-20 pb-10 ">
-          <h2 className=' text-center text-3xl sm:text-5xl font-bold px-8 mb-20  '>Our Unique Approach</h2>
-          <h3 className="text-4xl font-semibold mb-6 px-8 text-center ">ART SOLUTION</h3>
+          <h2 className=' text-3xl sm:text-5xl font-bold px-8 mb-20  '>Our Unique Approach</h2>
+          <h3 className="text-4xl font-semibold mb-6 px-8  ">ART SOLUTION</h3>
           <div className="flex flex-col lg:flex-row mb-6">
             {aboutART.map((item, index) => (
 
@@ -179,7 +179,7 @@ function LandingPage() {
         </div>
         <div className="pt-20 pb-10 px-4 sm:px-8">
 
-          <h3 className="text-4xl text-center font-semibold mb-10 ">The <span className='text-4xl text-blue-500'>EARTH</span> Agenda</h3>
+          <h3 className="text-4xl  font-semibold mb-10 ">The <span className='text-4xl text-blue-500'>EARTH</span> Agenda</h3>
           <div className="grid justify-center  sm:grid-cols-2 md:grid-cols-3 gap-8 py-10">
             {aboutEarth.map((item, index) => (
 
@@ -193,7 +193,7 @@ function LandingPage() {
 
         </div>
       </section>
-      <section className='pt-20 bg-green-500/50 pb-10'>
+      <section className='pt-20 bg-brblue/30 pb-10'>
         <div className='flex flex-col md:flex-row px-4 sm:px-8 gap-8 items-center'>
           <div className='flex-1'>
             <h2 className='font-bold text-3xl md:text-5xl mb-4'>Making Strides Toward a Greener Tomorrow</h2>
