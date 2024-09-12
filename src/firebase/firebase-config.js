@@ -2,8 +2,12 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from 'firebase/storage';
+import { getDownloadURL } from "firebase/storage";
+import { ref } from "firebase/storage";
+import { listAll } from "firebase/storage";
 
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { useEffect, useState } from "react";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -26,3 +30,36 @@ export const storage = getStorage(app)
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 export const provider = new GoogleAuthProvider();
+
+
+// Reference to the folder where images are stored
+const storageRef = ref(storage, 'images/projects');
+
+
+const useFirebaseImageUrls = (folderPath) => {
+  const [imageUrls, setImageUrls] = useState  ([]);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const storage = getStorage();
+        const storageRef = ref(storage, folderPath);
+        const result = await listAll(storageRef);
+
+        const urls = await Promise.all(
+          result.items.map((imageRef) => getDownloadURL(imageRef))
+        );
+
+        setImageUrls(urls);
+      } catch (error) {
+        console.error("Error fetching image URLs:", error);
+      }
+    };
+
+    fetchImages();
+  }, [folderPath]);
+
+  return imageUrls;
+};
+
+export default useFirebaseImageUrls;

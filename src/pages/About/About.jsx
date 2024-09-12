@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import heroImg from '../../assets/heroImg.png'
+import footprint from '../../assets/footprint.png'
 import Mteam from './MTeam'
+import bg from '../../assets/bg.jpg'
 
 function About() {
     const aboutVM = [
@@ -16,17 +17,17 @@ function About() {
 
     const aboutART = [
         {
-            title: 'A',
+            title: 'Advocacy',
             text: 'Clyme partners with communities, NGOs, and policymakers to drive sustainability through grassroots campaigns like climate awareness, recycling, and tree planting.',
             bg: ''
         },
         {
-            title: 'R',
-            text: 'CClyme drives renewable energy adoption by partnering with providers and offering innovative financing, making clean energy accessible across Africa to reduce carbon emissions.',
+            title: 'Renewable Energy',
+            text: 'Clyme drives renewable energy adoption by partnering with providers and offering innovative financing, making clean energy accessible across Africa to reduce carbon emissions.',
             bg: ''
         },
         {
-            title: 'T',
+            title: 'Technology',
             text: 'Clymes technology solution includes a mobile app that helps users track carbon footprints, set goals, and get personalized tips to reduce emissions. Our platform also supports carbon offsetting projects to promote global sustainability.',
             bg: ''
         },
@@ -56,24 +57,53 @@ function About() {
         }
     ]
 
+    const clymeAchieves = [
+        {
+            title: 'App Development',
+            text: 'The CarbonRewards app is in the final stages of development, set to launch within the next quarter.'
+
+        },
+        {
+            title: 'Public Awareness',
+            text: 'Conducted successful pilot campaigns, generating excitement and anticipation for the app launch.'
+
+        },
+        {
+            title: 'Strategic Partnerships',
+            text: 'Engaged in discussions with key stakeholders, ensuring widespread adoption and support.'
+
+        },
+        {
+            title: 'Land Acquisition',
+            text: 'Acquired 3 acres of land(18 Plots) worth 6000USD for future Climate Action.'
+
+        },
+        {
+            title: 'STEM Competition Winner(Runner-up)',
+            text: 'Clyme Idea won the sum of 150,000 at the Largest STEM Conference at the University of Ibadan. The Team came 2nd Position out of 30 Teams that contested.'
+
+        },
+
+    ]
+
     return (
         <div className="">
             <div className=" px-8  pt-20 pb-20 block md:flex md:flex-row-reverse items-center  gap-8">
-                <div>
-                    <h2 className="text-4xl sm:text-6xl max-w-[500px] leading-tight font-semibold">One <br />Carbon-Footprint at a time
+                <div className='flex-1'>
+                    <h2 className="text-4xl sm:text-6xl max-w-[500px] leading-tight font-semibold mb-10">One <br />Carbon-Footprint at a time
                     </h2>
-                    <p className="my-4 max-w-[600px] text-[17px] leading-loose">Clyme is a forward-thinking climate tech company committed to addressing climate change in Africa through ground breaking technology. Our mission is to empower individuals to make eco-friendly choices by introducing an app that incentivizes users for maintaining a carbon footprint below a monthly limit.</p>
+                    <p className="my-4 max-w-[400px] text-[17px] leading-loose">Clyme is a forward-thinking climate tech company committed to addressing climate change in Africa through ground breaking technology. Our mission is to empower individuals to make eco-friendly choices by introducing an app that incentivizes users for maintaining a carbon footprint below a monthly limit.</p>
                 </div>
-                <div className="vid-box w-full flex-1">
-                    <iframe width='100%' height='350' src="https://www.youtube.com/embed/vTQeJbh2ccA?si=qH0efJMRzlOmC9sk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <div className="flex-1 text-center">
+                    <img src={footprint} alt="" className='max-w-[300px] mx-auto' />
                 </div>
 
 
             </div>
 
             <section>
-                <div className="py-20 px-8 bg-teal-400">
-                    <div className="flex text-[18px] justify-center items-center flex-col md:flex-row gap-8 text-center sm:text-left mb-4">
+                <div className="py-20 px-8 bg-braccent">
+                    <div className="flex text-[18px] justify-center items-baseline flex-col md:flex-row gap-8 text-center sm:text-left mb-4 ">
                         {aboutVM.map((item, index) => (
 
                             <div key={index} className="flex-1  sm:mx-0">
@@ -83,37 +113,38 @@ function About() {
                         ))}
                     </div>
 
-
                 </div>
             </section>
-            <section className=''>
-                <div className="pt-20 pb-10 ">
-                    <h2 className='text-3xl sm:text-5xl font-bold px-8 mb-6  '>Our Unique Approach</h2>
-                    <h3 className="text-4xl font-semibold mb-10 px-8 ">ART SOLUTION</h3>
-                    <div className="flex flex-col lg:flex-row mb-6">
-                        {aboutART.map((item, index) => (
+            <section className='' >
+                <div className=" bg-cover bg-no-repeat" >
+                    <div className=' text-center py-20'>
+                        <h2 className=' text-3xl sm:text-5xl font-bold px-8 mb-20  '>Our Unique Approach</h2>
+                        <h3 className="text-4xl font-semibold mb-6 px-8  ">ART SOLUTION</h3>
+                        <div className="flex flex-col lg:flex-row mb-6 items-start">
+                            {aboutART.map((item, index) => (
 
-                            <div key={index} className="flex flex-row items-center py-4">
-                                <span className=" text-8xl sm:text-[160px]  md:pl-8 pr-2 px-4">{item.title}</span>
-                                <p className="flex-1 max-w-[400px] px-4">{item.text}</p>
-                            </div>
-                        ))}
+                                <div key={index} className="flex mx-auto flex-col items-center justify-center py-4">
+                                    <h3 className='text-[18px] font-bold bg-green-500/20  px-2 rounded-md py-1 mb-4 '>{item.title}</h3>
+                                    <p className="flex-1 max-w-[400px] px-4">{item.text}</p>
+                                </div>
+                            ))}
+
+
+                        </div>
+
+
 
 
                     </div>
 
-
-                    
-
-
                 </div>
-                <div className="pt-20 pb-10 px-4 sm:px-8">
+                <div className="pt-20 pb-10 px-4 sm:px-8 ">
 
                     <h3 className="text-4xl  font-semibold mb-10 ">The <span className='text-4xl text-blue-500'>EARTH</span> Agenda</h3>
                     <div className="grid justify-center  sm:grid-cols-2 md:grid-cols-3 gap-8 py-10">
                         {aboutEarth.map((item, index) => (
 
-                            <div key={index} className='p-4 border border-gray-300 rounded-md bg-gradient-to-r from-brgreen/30 to-brblue/10'  >
+                            <div key={index} className='p-4 bg-white border border-gray-300 rounded-md bg-gradient-to-r '  >
                                 <h4 className='font-semibold text-3xl mb-4 backdrop-filter backdrop-opacity-40 backdrop-blur-40'>{item.title}</h4>
                                 <p className='leading-loose'>{item.text}</p>
                             </div>
@@ -123,34 +154,27 @@ function About() {
 
                 </div>
             </section>
-            <section className='bg-teal-950/90'>
-                <div className='px-8 pt-10 py-10'>
-                    <h2 className='mb-8 text-4xl font-bold text-white'>The Clyme Advantage: Unmatched Progress
+            <section className='py-20 px-8'>
+                <div className=' '>
+                    <h2 className='mb-10 text-4xl font-bold '>The Clyme Advantage: Unmatched Progress
                     </h2>
-                    <ul className='grid sm:grid-cols-2 lg:grid-cols-3 gap-8'>
-                        
-                        
-                        <li className='md:max-w-[400px] min-w-[300px] text-gray-300 bg-black/20 p-4'><span className='font-semibold text-xl text-white '>App Development: </span>
-                            The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
-                        </li>
-                        <li className='md:max-w-[400px] min-w-[300px] text-gray-300 bg-black/20 p-4'><span className='font-semibold text-xl text-white '>App Development: </span>
-                            The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
-                        </li>
-                        <li className='md:max-w-[400px] min-w-[300px] text-gray-300 bg-black/20 p-4'><span className='font-semibold text-xl text-white '>App Development: </span>
-                            The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
-                        </li>
-                        <li className='md:max-w-[400px] min-w-[300px] text-gray-300 bg-black/20 p-4'><span className='font-semibold text-xl text-white '>App Development: </span>
-                            The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
-                        </li>
-                        <li className='md:max-w-[400px] min-w-[300px] text-gray-300 bg-black/20 p-4'><span className='font-semibold text-xl text-white '>App Development: </span>
-                            The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
-                        </li>
-                        <li className='md:max-w-[400px] min-w-[300px] text-gray-300 bg-black/20 p-4'><span className='font-semibold text-xl text-white '>App Development: </span>
-                            The CarbonRewards app is in the final stages of development, set to launch within the next quarter.
-                        </li>
-                        
-                        
-                    </ul>
+                    <div className='flex'>
+
+
+                        <ul className='flex-1 grid sm:grid-cols-2 gap-8 justify-between'>
+                            {
+                                clymeAchieves.map((n, i) => (
+
+                                    <li className=' min-w-[300px] p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform'><span className='font-semibold block  '>{n.title}: </span>
+                                        {n.text}
+                                    </li>
+                                ))
+                            }
+
+
+                        </ul>
+
+                    </div>
 
 
                 </div>

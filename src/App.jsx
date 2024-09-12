@@ -22,6 +22,9 @@ import { AuthProvider } from './context/authContext';
 import Tcms from './pages/Tcms/Tcms';
 import Blogg from './pages/Tcms/Blogg';
 import BlogList from './pages/Tcms/components/BlogList';
+import Cblog from './pages/Blog/Cblog';
+import NotFound from './pages/NotFound';
+
 
 function App() {
 
@@ -48,18 +51,20 @@ function App() {
                 }
               />
               <Route path="/login" element={<Login />} />
-              <Route path="/BlogPost" element={<BlogPost />} />
-              <Route path="/Projects" element={<Projects />} />
+             
+              <Route path="/blog/:id" element={<BlogPost />} />
+              
+              <Route path="/gallery" element={<Projects />} />
               <Route path="/Project" element={<ProjectPage />} />
               <Route path="/Contact" element={<Contact />} />
               <Route path="/Donate" element={<Donate />} />
-              <Route path="/Volunteer" element={<Volunteer />} />
+              <Route path="/Volunteer" element={<Membership />} />
               <Route path="/Partner" element={<Partner />} />
-              <Route path="/Membership" element={<Membership />} />
+              
               <Route path="/Team" element={<MeetOurTeam />} />
 
               <Route path="/" element={<LandingPage />} />
-
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </AuthProvider>
         </main>

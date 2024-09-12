@@ -1,129 +1,80 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-// Sample team data
 const team = [
     {
-        name: 'Jane Smith',
-        title: 'Chief Executive Officer',
-        country: 'USA',
-        details: 'Jane is a visionary leader with over 20 years of experience in environmental advocacy. She spearheads our initiatives with a passion for sustainable development and climate action.'
+      imgUrl: ' https://firebasestorage.googleapis.com/v0/b/clymechange.appspot.com/o/images%2Fteam%2FWhatsApp%20Image%202024-09-09%20at%2020.28.51_e396f6f2.jpg?alt=media&amp;token=450ac3b6-83cf-4e9d-adc6-70258a9876ad',
+      name: 'Adesoji Praise-God A.',
+      post: 'CEO/Founder'
     },
     {
-        name: 'Michael Brown',
-        title: 'Chief Operations Officer',
-        country: 'USA',
-        details: 'With a background in environmental science and a knack for strategic planning, Michael ensures our operations run smoothly and efficiently, driving impactful results.'
+      imgUrl: 'https://firebasestorage.googleapis.com/v0/b/clymechange.appspot.com/o/images%2Fteam%2FWhatsApp%20Image%202024-09-09%20at%2015.06.39_e9490f78.jpg?alt=media&amp;token=6c13f75c-974c-4abe-9e8b-3f85b8198f44',
+      name: 'Akinbote Oreoluwa R.',
+      post: 'Co-founder/COO'
+    },
+  
+    {
+      imgUrl: 'https://firebasestorage.googleapis.com/v0/b/clymechange.appspot.com/o/images%2Fteam%2FWhatsApp%20Image%202024-09-09%20at%2015.07.37_255fb7bc.jpg?alt=media&amp;token=d8fe6f77-57b0-43a8-863c-f360e4eb88ca',
+      name: 'Olujinmi Olamide',
+      post: "Chief Admin"
+    },
+  
+    {
+      imgUrl: 'https://firebasestorage.googleapis.com/v0/b/clymechange.appspot.com/o/images%2Fteam%2FWhatsApp%20Image%202024-09-09%20at%2015.07.37_9cfb73cd.jpg?alt=media&amp;token=553a46c3-b31a-483e-9098-49717a951862',
+      name: 'Ojo Oluwatunmininu',
+      post: 'Chief Technology Officer (CTO)'
+    },
+  
+    {
+      imgUrl: 'https://firebasestorage.googleapis.com/v0/b/clymechange.appspot.com/o/images%2Fteam%2FWhatsApp%20Image%202024-09-09%20at%2015.06.40_3331ca6c.jpg?alt=media&amp;token=ec84c6b7-2c3c-48bf-90c6-aedb3e915891',
+      name: 'Olakunle Doyinsola',
+      post: 'Director for Partnerships'
     },
     {
-        name: 'Aisha Khan',
-        title: 'Chief Technology Officer',
-        country: 'Pakistan',
-        details: 'Aisha brings innovative technological solutions to our climate challenges. Her expertise in renewable energy technologies and smart grids is instrumental in our mission.'
+      imgUrl: 'https://firebasestorage.googleapis.com/v0/b/clymechange.appspot.com/o/images%2Fteam%2FWhatsApp%20Image%202024-09-09%20at%2015.09.17_82f3bc03.jpg?alt=media&amp;token=f4b4d56b-d687-41d1-bb9e-62f05e3f13b4',
+      name: 'Ogundimu Tosin',
+      post: 'Team Lead, Research and Innovation'
     },
     {
-        name: 'Carlos Rodríguez',
-        title: 'Chief Financial Officer',
-        country: 'Spain',
-        details: 'Carlos manages our financial strategies with a focus on transparency and sustainability. His work ensures that our resources are used effectively to maximize our impact.'
+      imgUrl: 'https://firebasestorage.googleapis.com/v0/b/clymechange.appspot.com/o/images%2Fteam%2FWhatsApp%20Image%202024-09-09%20at%2020.28.52_29416c9b.jpg?alt=media&amp;token=32bbb70c-9e17-4182-8570-9fc66c6f0c35', 
+      name: 'Adeniyi Christopher',
+      post: 'Social Media Manager'
     },
+  
     {
-        name: 'Sofia Martins',
-        title: 'Project Coordinator',
-        country: 'Brazil',
-        details: 'Sofia coordinates reforestation projects in the Amazon rainforest, working closely with local communities to promote sustainable land management.'
+      imgUrl: 'https://firebasestorage.googleapis.com/v0/b/clymechange.appspot.com/o/images%2Fteam%2FWhatsApp%20Image%202024-09-09%20at%2020.42.02_eb43d007.jpg?alt=media&amp;token=1d839629-eaca-456b-8971-9f72361b777',
+      name: 'Tolulope-O-Lawal ',
+      post: 'Finance Officer/Accountant'
     },
-    {
-        name: 'Liam O\'Connor',
-        title: 'Environmental Scientist',
-        country: 'Ireland',
-        details: 'Liam conducts cutting-edge research on the impacts of climate change on marine ecosystems, contributing vital data to our global initiatives.'
-    },
-    {
-        name: 'Mei Ling Chen',
-        title: 'Communications Specialist',
-        country: 'China',
-        details: 'Mei Ling leads our outreach programs in Asia, raising awareness about climate change through compelling storytelling and media campaigns.'
-    },
-    {
-        name: 'Raj Patel',
-        title: 'Renewable Energy Engineer',
-        country: 'India',
-        details: 'Raj designs and implements renewable energy systems in rural areas, providing sustainable power solutions to communities in need.'
-    },
-    {
-        name: 'Elena Petrova',
-        title: 'Climate Policy Analyst',
-        country: 'Russia',
-        details: 'Elena analyzes climate policies and their implications, helping shape our advocacy efforts on an international scale.'
-    },
-    {
-        name: 'Fatima El Hassan',
-        title: 'Community Engagement Officer',
-        country: 'Morocco',
-        details: 'Fatima works with local communities in North Africa to develop and implement climate resilience projects, fostering grassroots support for our mission.'
-    },
-    {
-        name: 'Tom Nguyen',
-        title: 'Data Scientist',
-        country: 'Vietnam',
-        details: 'Tom leverages big data to track climate trends and measure the effectiveness of our programs, ensuring we stay on the cutting edge of climate science.'
-    },
-    {
-        name: 'Isabella Rossi',
-        title: 'Sustainability Consultant',
-        country: 'Italy',
-        details: 'Isabella advises businesses and governments on sustainable practices, driving forward our agenda for a greener, more resilient future.'
-    },
-];
 
-// Team Member component
-const TeamMember = ({ member, onClick }) => (
-    <div className='flex items-start gap-4 p-4' onClick={() => onClick(member)}>
-        <div className='h-12 w-12 rounded-full border shadow-md '>
+    {
+      imgUrl: 'https://firebasestorage.googleapis.com/v0/b/clymechange.appspot.com/o/images%2Fteam%2FWhatsApp%20Image%202024-09-09%20at%2021.09.25_0f9aa518.jpg?alt=media&token=5d496148-1515-4e89-a650-1d40538845bb',
+      name: 'Inioluwa Onafowokan',
+      post: 'Chief Sustainability Officer'
+    }
+  ]
 
-        </div>
-        <div className=" cursor-pointer" >
-            <h3 className="text-lg font-semibold">{member.name}</h3>
-            <p>{member.title}</p>
-            <p>{member.country}</p>
-        </div>
-    </div>
-);
 
-// Modal component
-const Modal = ({ member, onClose }) => (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-        <div className="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
-            <h2 className="text-2xl font-semibold mb-4">{member.name}</h2>
-            <h3 className="text-lg font-semibold mb-2">{member.title}</h3>
-            <p className="mb-4">{member.country}</p>
-            <p>{member.details}</p>
-            <button onClick={onClose} className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Close</button>
-        </div>
-    </div>
-);
 
 const Mteam = () => {
-    const [selectedMember, setSelectedMember] = useState(null);
-
-    const handleClick = (member) => {
-        setSelectedMember(member);
-    };
-
-    const handleClose = () => {
-        setSelectedMember(null);
-    };
-
+    
     return (
         <div className="container mx-auto  py-8 px-8">
-            <h1 className="text-4xl font-semibold  mb-8">Meet Our Team</h1>
-            <div className="grid grid-cols-1 xsm:grid-cols-2 md:grid-cols-3 mx-auto gap-4 mb-6">
-                {team.map((member, index) => (
-                    <TeamMember key={index} member={member} onClick={handleClick} />
-                ))}
+            <h1 className="text-4xl font-semibold  mb-8">Our Team Our Strength</h1>
+
+            <div className='image-grid '>
+                    {team.map((member, index) => (
+                        <div className='team-img-con min-h-[300px] bg-center bg-cover bg-no-repeat relative' style={{backgroundImage:`url(${member.imgUrl})`}}>
+                            
+                            <div className='bg-black/60 text-white p-2 absolute bottom-0 w-full'>
+                                <p className='text-bold'>{member.name}</p>
+                                <p className='text-sm text-white/80'>{member.post}</p>
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
-            <div><button className='inline-block py-2 px-8 bg-cyan-400'>more</button></div>
-            {selectedMember && <Modal member={selectedMember} onClose={handleClose} />}
+
+
         </div>
     );
 };

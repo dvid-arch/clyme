@@ -35,7 +35,7 @@ function Navbar({ shadow }) {
       <div className={`justify-between text-[18px] flex-1 max-w-[80ch] text-slate-600  hidden md:flex px-10 ${shadow && 'scale-90'}`}>
         <NavLink to={'/about'} className='font-semibold uppercase '>About</NavLink>
 
-        <NavLink to={'/projects'} className='font-semibold uppercase '>Projects</NavLink>
+        <NavLink to={'/gallery'} className='font-semibold uppercase '>Gallery</NavLink>
 
         <div className=''>
           <span onClick={ handleSup} className='font-semibold uppercase relative'>Support Clyme</span>
@@ -50,7 +50,7 @@ function Navbar({ shadow }) {
         <NavLink to={'/contact'} className='font-semibold uppercase '>Contact</NavLink>
       </div>
       <div className='hidden sm:block'>
-        <Link to={'/donate'} className='bg-red-500 text-white  py-1 px-3 text-[21px] sm:hidden md:block'>Donate</Link>
+        <Link to={'/donate'} className='bg-green-500 text-white  py-1 px-3 text-[21px] sm:hidden md:block'>Donate</Link>
       </div>
       <div className='flex flex-col gap-1 border p-[2px] shadow md:hidden' onClick={handleClick}>
         <span className='w-8 h-1 bg-black block rounded-full'></span>

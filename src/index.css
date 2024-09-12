@@ -16,4 +16,11 @@ body{
     overflow: hidden;
   }
   
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px; /* Adjust the gap between images */
+    padding: 16px;
+  }
+
   
