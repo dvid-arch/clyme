@@ -2,7 +2,7 @@ import heroImg from '../../assets/heroImg.png'
 import award1 from '../../assets/150k.jpg'
 import award2 from '../../assets/opendialogue.jpg'
 import proj from '../../assets/proj.jpg'
-import bgImg from '../../assets/bgImg.svg'
+import bgImg from '../../assets/stripe.png'
 
 
 import { Link } from 'react-router-dom'
@@ -163,7 +163,7 @@ function LandingPage() {
           <p className='text-16px md:text-[18px] my-4 text-center sm:text-left text-slate-600 max-w-[80%] mb-8'>Africa faces severe climate challenges like flooding, famine, and pollution. Clyme is driving innovative solutions—join us in taking action to protect our planet. </p>
           <a href='#actnow' className='px-4 py-1 text-[21px]  block w-fit bg-green-500 text-white mx-auto  sm:mx-0'>Act Now</a>
         </div>
-        <div className='  sm:h-auto hero-img sm:flex-1 flex align-bottom justify-center bg-center bg-contain bg-no-repeat' style={{ backgroundImage: `url(${bgImg})` }}><img src={heroImg} alt="" className=' w-1/2  sm:w-10/12 md:w-2/3 xl:w-1/2  h-auto block' /></div>
+        <div className=' flex-1 w-full  sm:h-auto hero-img sm:flex-1 flex align-bottom justify-center bg-center bg-contain bg-no-repeat' style={{ backgroundImage: `url(${bgImg})` }}><img src={heroImg} alt="" className=' w-1/2  sm:w-10/12 md:w-2/3 xl:w-1/2  h-auto block' /></div>
       </div>
       <AnimatedNumber achievements={achievements} />
       <section>

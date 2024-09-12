@@ -4,6 +4,7 @@ import { getBlogs, deleteBlog } from '../../services/blogServices';
 import { Link } from 'react-router-dom';
 
 const List = ({blogs}) => {
+  
   return (
     <div className=' grid gap-12 sm:grid-cols-3 md:grid-cols-4 '>
       {blogs.map((blog) => (
