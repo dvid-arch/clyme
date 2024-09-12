@@ -57,18 +57,18 @@ function LandingPage() {
     {
       svgLink: faDonate,
       type: 'Donate',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis, quis eum neque odit repudiandae?',
-
+      text: 'Support our cause today',
+      
     },
     {
       svgLink: faHandshake,
       type: 'Partner',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis, quis eum neque odit repudiandae?',
+      text: 'Join us in making a difference.',
     },
     {
       svgLink: faHandsHelping,
       type: 'Volunteer',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis, quis eum neque odit repudiandae?',
+      text: 'Lend a hand, change a life.',
     },
   ]
 
@@ -139,17 +139,17 @@ function LandingPage() {
     }
   ]
 
-  
+
   const imageUrls = useFirebaseImageUrls("/images/projects")
 
   const [selectImageIndex, setSelectedImageIndex] = useState([0])
 
 
-  function ranSelectImg(index){
-    const randomIndex = Math.floor(Math.random()*imageUrls.length)
+  function ranSelectImg(index) {
+    const randomIndex = Math.floor(Math.random() * imageUrls.length)
 
-    if(!index) return randomIndex[randomIndex]
-    if(!selectImageIndex.includes(randomIndex)) return imageUrls[index]
+    if (!index) return randomIndex[randomIndex]
+    if (!selectImageIndex.includes(randomIndex)) return imageUrls[index]
 
     return ranSelectImg(randomIndex)
   }
@@ -157,10 +157,10 @@ function LandingPage() {
   return (
     <div className='pt-10'>
 
-      <div className='flex flex-col-reverse gap-8 sm:flex-row sm:items-center px-4 sm:px-8 relative  align-center'>
+      <div className='container mx-auto flex flex-col-reverse gap-8 sm:flex-row sm:items-center px-4 sm:px-8 relative  align-center'>
         <div className='flex-1 -mt-20 sm:mt-0 gradd py-10'>
           <h1 className='text-[40px] text-center sm:text-[64px] xl:text-[80px] font-bold leading-none mb-6 sm:text-left'>The time to save the planet is now</h1>
-          <p className='text-16px md:text-[18px] my-4 text-center sm:text-left text-slate-600 max-w-[80%] mb-8'>Africa faces severe climate challenges like flooding, famine, and pollution. Clyme is driving innovative solutions—join us in taking action to protect our planet. </p>
+          <p className='text-16px md:text-[18px] my-4 text-center sm:text-left text-slate-600 max-w-[80%] mb-8 mx-auto sm:mx-0'>Africa faces severe climate challenges like flooding, famine, and pollution. Clyme is driving innovative solutions—join us in taking action to protect our planet. </p>
           <a href='#actnow' className='px-4 py-1 text-[21px]  block w-fit bg-green-500 text-white mx-auto  sm:mx-0'>Act Now</a>
         </div>
         <div className=' flex-1 w-full  sm:h-auto hero-img sm:flex-1 flex align-bottom justify-center bg-center bg-contain bg-no-repeat' style={{ backgroundImage: `url(${bgImg})` }}><img src={heroImg} alt="" className=' w-1/2  sm:w-10/12 md:w-2/3 xl:w-1/2  h-auto block' /></div>
@@ -168,7 +168,7 @@ function LandingPage() {
       <AnimatedNumber achievements={achievements} />
       <section>
         <div className="py-20 px-8 bg-braccent">
-          <div className="flex text-[18px] justify-center items-baseline flex-col md:flex-row gap-8 text-center sm:text-left mb-4">
+          <div className="flex text-[18px] justify-center items-baseline flex-col md:flex-row gap-8 text-center sm:text-left mb-4 container mx-auto">
             {aboutVM.map((item, index) => (
 
               <div key={index} className="flex-1  sm:mx-0">
@@ -182,90 +182,96 @@ function LandingPage() {
         </div>
       </section>
       <section className='' >
-        <div className=" bg-cover bg-no-repeat" >
-          <div className=' text-center flex flex-col items-center justify-center py-20'>
-            <h2 className=' text-3xl sm:text-5xl font-bold px-8 mb-20 '>Our Unique Approach</h2>
-            <h3 className="text-4xl font-semibold mb-6 px-8  ">ART SOLUTION</h3>
-            <div className="flex flex-col lg:flex-row mb-6 items-start">
-              {aboutART.map((item, index) => (
+        <div className='container mx-auto'>
 
-                <div key={index} className="flex flex-col items-center justify-center py-4">
-                  <h3 className='text-[18px] font-bold bg-green-500/20  px-2 rounded-md py-1 mb-4 '>{item.title}</h3>
-                  <p className="flex-1 max-w-[400px] px-4">{item.text}</p>
+          <div className="" >
+            <div className=' text-center flex flex-col items-center justify-center py-20'>
+              <h2 className=' text-3xl sm:text-5xl font-bold px-8 mb-20 '>Our Unique Approach</h2>
+              <h3 className="text-4xl font-semibold mb-6 px-8  ">ART SOLUTION</h3>
+              <div className="flex flex-col lg:flex-row mb-6 items-start">
+                {aboutART.map((item, index) => (
+
+                  <div key={index} className="flex flex-col items-center justify-center py-4">
+                    <h3 className='text-[18px] font-bold bg-green-500/20  px-2 rounded-md py-1 mb-4 '>{item.title}</h3>
+                    <p className="flex-1 max-w-[400px] px-4">{item.text}</p>
+                  </div>
+                ))}
+
+              </div>
+              <Link to={'/about'} className='bg-green-500 text-white  py-2 px-8 text-[21px] block w-fit rounded-md mx-auto sm:mx-0'>Learn More</Link>
+
+
+
+
+            </div>
+
+          </div>
+          <div className="pt-20 pb-10 px-4 sm:px-8 ">
+
+            <h3 className="text-4xl  font-semibold mb-10 ">The <span className='text-4xl text-blue-500'>EARTH</span> Agenda</h3>
+            <div className="grid justify-center  sm:grid-cols-2 md:grid-cols-3 gap-8 py-10">
+              {aboutEarth.map((item, index) => (
+
+                <div key={index} className='p-4 bg-white border border-gray-300 rounded-md bg-gradient-to-r '  >
+                  <h4 className='font-semibold text-3xl mb-4 backdrop-filter backdrop-opacity-40 backdrop-blur-40'>{item.title}</h4>
+                  <p className='leading-loose'>{item.text}</p>
                 </div>
               ))}
-
             </div>
+
             <Link to={'/about'} className='bg-green-500 text-white  py-2 px-8 text-[21px] block w-fit rounded-md mx-auto sm:mx-0'>Learn More</Link>
-
-
-
-
           </div>
-
-        </div>
-        <div className="pt-20 pb-10 px-4 sm:px-8 ">
-
-          <h3 className="text-4xl  font-semibold mb-10 ">The <span className='text-4xl text-blue-500'>EARTH</span> Agenda</h3>
-          <div className="grid justify-center  sm:grid-cols-2 md:grid-cols-3 gap-8 py-10">
-            {aboutEarth.map((item, index) => (
-
-              <div key={index} className='p-4 bg-white border border-gray-300 rounded-md bg-gradient-to-r '  >
-                <h4 className='font-semibold text-3xl mb-4 backdrop-filter backdrop-opacity-40 backdrop-blur-40'>{item.title}</h4>
-                <p className='leading-loose'>{item.text}</p>
-              </div>
-            ))}
-          </div>
-
-          <Link to={'/about'} className='bg-green-500 text-white  py-2 px-8 text-[21px] block w-fit rounded-md mx-auto sm:mx-0'>Learn More</Link>
         </div>
       </section>
-      <section className='pt-20 pb-10 px-8'>
-        <div className=' flex gap-8 flex-col-reverse sm:flex-row justify-center items-center'>
-          <div className='flex-1 '>
-            <h2 className='text-4xl font-bold mb-6'>
-            Explore Our Climate Change Gallery
-            </h2>
-            <p className='text-xl max-w-[400px] mb-8'>From powerful quotes that inspire our mission to prestigious awards that recognize our efforts, this collection captures the essence of our work.</p>
+      <section className=''>
+        <div className='container mx-auto pt-20 pb-10 px-8'>
+          <div className=' flex gap-8 flex-col-reverse sm:flex-row justify-center items-center'>
+            <div className='flex-1 '>
+              <h2 className='text-4xl font-bold mb-6'>
+                Explore Our Climate Change Gallery
+              </h2>
+              <p className='text-xl max-w-[400px] mb-8'>From powerful quotes that inspire our mission to prestigious awards that recognize our efforts, this collection captures the essence of our work.</p>
 
-            <Link to={'/gallery'} className='   py-2 px-8 bg-green-500 text-[21px] block w-fit rounded-md  text-white font-semibold'>Explore Our Story</Link>
-          </div>
-          <div className=' flex-1 flex flex-col gap-4 bg-brblue/20 max-w-[600px] p-4 md:px-8 md:py-12 rounded-md'>
-            <div className='flex  gap-4  '>
-
-              <div className=' flex-1'>
-                <img src={award1} alt="" />
-              </div>
-              <div className=' flex-1 flex flex-col gap-4 '>
-                <div className='grid grid-cols-2 gap-4'>
-                  <img src={imageUrls[0]} alt="" />
-                  <img src={imageUrls[1]} alt="" />
-
-                </div>
-                <div className='grid grid-cols-2 gap-4'>
-                  <img src={imageUrls[20]} alt="" />
-                  <img src={imageUrls[15]} alt="" />
-
-                </div>
-              </div>
+              <Link to={'/gallery'} className='   py-2 px-8 bg-green-500 text-[21px] block w-fit rounded-md  text-white font-semibold'>Explore Our Story</Link>
             </div>
-            <div className='flex gap-4 items-center' >
-              <div className='grid grid-cols-2 gap-4 flex-1'>
+            <div className=' flex-1 flex flex-col gap-4 bg-brblue/20 max-w-[600px] p-4 md:px-8 md:py-12 rounded-md'>
+              <div className='flex  gap-4  '>
 
-                <img src={imageUrls[9]} alt="" />
-                <img src={imageUrls[11]} alt="" />
+                <div className=' flex-1'>
+                  <img src={award1} alt="" />
+                </div>
+                <div className=' flex-1 flex flex-col gap-4 '>
+                  <div className='grid grid-cols-2 gap-4'>
+                    <img src={imageUrls[0]} alt="" />
+                    <img src={imageUrls[1]} alt="" />
+
+                  </div>
+                  <div className='grid grid-cols-2 gap-4'>
+                    <img src={imageUrls[20]} alt="" />
+                    <img src={imageUrls[15]} alt="" />
+
+                  </div>
+                </div>
               </div>
-              <div className='flex-1'>
-                <img src={proj} alt="" />
+              <div className='flex gap-4 items-center' >
+                <div className='grid grid-cols-2 gap-4 flex-1'>
+
+                  <img src={imageUrls[9]} alt="" />
+                  <img src={imageUrls[11]} alt="" />
+                </div>
+                <div className='flex-1'>
+                  <img src={proj} alt="" />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section className='pt-20 pb-10' id='actnow'>
-        <div className='px-8'>
+        <div className=' container mx-auto px-8'>
+          
           <h2 className='text-4xl font-bold mb-8'>Become a Climate Champion</h2>
-          <div className='grid sm:grid-cols-2  md:grid-cols-3 justify-around gap-8  mx-auto'>
+          <div className='grid sm:grid-cols-2  md:grid-cols-3 gap-8  mx-auto'>
             {supportClyme.map((item, index) =>
 
               <div key={index} className='p-4 border border-teal-500 shadow-md flex flex-col items-center text-center gap-4 max-w-[360px]'>

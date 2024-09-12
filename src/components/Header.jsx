@@ -23,10 +23,13 @@ function Header() {
 
   return (
     <header className={` transition-all sticky top-0 z-40 bg-[#f6fff9] ${shadow && 'shadow-lg'}`}>
-      <div className="prompt bg-teal-500  px-8 hidden">
-        Hey!, it's 3 days to our major event of the year, learn more
+      <div className='container mx-auto'>
+
+        <div className="prompt bg-teal-500  px-8 hidden">
+          Hey!, it's 3 days to our major event of the year, learn more
+        </div>
+        <Navbar shadow={shadow} />
       </div>
-      <Navbar shadow={shadow} />
     </header>
   )
 }
